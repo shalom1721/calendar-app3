@@ -1,0 +1,114 @@
+body {
+  background-color: #f4f6fa;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calendar {
+  width: 95%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.3rem;
+}
+
+.calendar-header button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.calendar-header button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f0f2f5;
+}
+
+.calendar-cell {
+  border: 1px solid #e0e0e0;
+  min-height: 100px;
+  padding: 8px;
+  background-color: white;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-cell:hover {
+  background-color: #f5faff;
+}
+
+.calendar-day-label {
+  background-color: #f7f9fc;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.faded {
+  color: #c5c5c5;
+  background-color: #fafafa;
+}
+
+.today {
+  border: 2px solid #4e54c8;
+  background-color: #f0f4ff;
+}
+
+.date-number {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.event {
+  background-color: #4e54c8;
+  color: white;
+  padding: 3px 6px;
+  margin-top: 6px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .calendar-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .calendar-cell {
+    min-height: 80px;
+    font-size: 0.85rem;
+  }
+
+  .event {
+    font-size: 0.75rem;
+  }
+}
